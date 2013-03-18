@@ -1,7 +1,6 @@
 # grunt-coffeecup
-*WORK IN PROGRESS -- PRE-GENERATED DOCS AND TESTS*
 
-> Compile CoffeeCup into HTML.
+Grunt task to compile [CoffeeCup](https://github.com/gradus/coffeecup) into HTML.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -27,21 +26,27 @@ Task targets, files and options may be specified according to the grunt [Configu
 
 Any items in the `options` object are passed to CoffeeCup's `render` function.
 
-### Usage Examples
+### Usage Example
 
-#### Default Options
 ```coffee-script
 grunt.initConfig
   # ... other configurations ...
   coffeecup:
     simple:
-      'path/to/result.html': 'path/to/source.coffee'
+      files:
+        'path/to/result.html': 'path/to/source.coffee'
     recurse:
       expand: true
       cwd: 'path/to'
       src: ['**/*.coffee']
       dest: 'path/to/dest'
       ext: '.html'
+    custom_title:
+      options:
+        title: 'Sweet Title, Bro'
+      files:
+        'path/to/custom/result.html': 'path/to/custom/source.coffee'
+
 ```
 
 ## Contributing

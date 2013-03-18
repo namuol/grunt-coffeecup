@@ -16,9 +16,8 @@ module.exports = (grunt) ->
     # Configuration to be run (and then tested).
     coffeecup:
       default_options:
-        options: {}
         files:
-          "tmp/default/test.html": "test/fixtures/default/test.coffee"
+          'tmp/default/test.html': 'test/fixtures/default/test.coffee'
       with_variables:
         options:
           title: 'wat'
