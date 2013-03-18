@@ -19,68 +19,29 @@ grunt.loadNpmTasks('grunt-coffeecup');
 ```
 
 ## The "coffeecup" task
+_Run this task with the `grunt coffeecup` command._
 
-### Overview
-In your project's Gruntfile, add a section named `coffeecup` to the data object passed into `grunt.initConfig()`.
-
-```js
-grunt.initConfig({
-  coffeecup: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-})
-```
+Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+Any items in the `options` object are passed to CoffeeCup's `render` function.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  coffeecup: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  coffeecup: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+```coffee-script
+grunt.initConfig
+  # ... other configurations ...
+  coffeecup:
+    simple:
+      'path/to/result.html': 'path/to/source.coffee'
+    recurse:
+      expand: true
+      cwd: 'path/to'
+      src: ['**/*.coffee']
+      dest: 'path/to/dest'
+      ext: '.html'
 ```
 
 ## Contributing

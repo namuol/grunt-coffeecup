@@ -33,3 +33,18 @@ exports.coffee =
       "Should compile CoffeeCup to HTML with a custom title"
 
     test.done()
+
+  compileRecursive: (test) ->
+    test.expect 2
+
+    assertFileEquality test,
+      "tmp/recursive/a/test.html",
+      "test/expected/recursive/a/test.html",
+      "Should compile all CoffeeCup to HTML in recursive file structure"
+
+    assertFileEquality test,
+      "tmp/recursive/b/test.html",
+      "test/expected/recursive/b/test.html",
+      "Should compile all CoffeeCup to HTML in recursive file structure"
+      
+    test.done()

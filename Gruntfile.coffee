@@ -24,6 +24,13 @@ module.exports = (grunt) ->
           title: 'wat'
         files:
           "tmp/variables/test.html": "test/fixtures/variables/test.coffee"
+      recursive:
+        expand: true
+        cwd: 'test/fixtures/recursive'
+        src: ['**/*.coffee']
+        dest: 'tmp/recursive'
+        ext: '.html'
+
     # Unit tests.
     nodeunit:
       tests: ["test/*_test.coffee"]
