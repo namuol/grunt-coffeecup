@@ -19,7 +19,11 @@ module.exports = (grunt) ->
         options: {}
         files:
           "tmp/default/test.html": "test/fixtures/default/test.coffee"
-    
+      with_variables:
+        options:
+          title: 'wat'
+        files:
+          "tmp/variables/test.html": "test/fixtures/variables/test.coffee"
     # Unit tests.
     nodeunit:
       tests: ["test/*_test.coffee"]

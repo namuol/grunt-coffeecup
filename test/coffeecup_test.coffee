@@ -23,3 +23,13 @@ exports.coffee =
       "Should compile CoffeeCup to HTML"
 
     test.done()
+
+  compileVariables: (test) ->
+    test.expect 1
+
+    assertFileEquality test,
+      "tmp/variables/test.html",
+      "test/expected/variables/test.html",
+      "Should compile CoffeeCup to HTML with a custom title"
+
+    test.done()
