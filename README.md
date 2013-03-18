@@ -11,10 +11,10 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 npm install grunt-coffeecup --save-dev
 ```
 
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of CoffeeScript:
 
-```js
-grunt.loadNpmTasks('grunt-coffeecup');
+```coffee-script
+grunt.loadNpmTasks 'grunt-coffeecup'
 ```
 
 ## The "coffeecup" task
@@ -29,6 +29,7 @@ Any items in the `options` object are passed to CoffeeCup's `render` function.
 ### Usage Example
 
 ```coffee-script
+# CoffeeScript:
 grunt.initConfig
   # ... other configurations ...
   coffeecup:
