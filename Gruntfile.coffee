@@ -18,19 +18,11 @@ module.exports = (grunt) ->
       default_options:
         options: {}
         files:
-          "tmp/default_options": ["test/fixtures/testing", "test/fixtures/123"]
-
-      custom_options:
-        options:
-          separator: ": "
-          punctuation: " !!!"
-
-        files:
-          "tmp/custom_options": ["test/fixtures/testing", "test/fixtures/123"]
+          "tmp/default/test.html": "test/fixtures/default/test.coffee"
     
     # Unit tests.
     nodeunit:
-      tests: ["test/*_test.js"]
+      tests: ["test/*_test.coffee"]
   
   # Actually load this plugin's task(s).
   grunt.loadTasks "tasks"
