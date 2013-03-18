@@ -1,4 +1,4 @@
-# grunt-coffeecup
+# grunt-coffeecup [![Build Status](https://secure.travis-ci.org/namuol/grunt-coffeecup.png?branch=master)](http://travis-ci.org/namuol/grunt-coffeecup)
 
 Grunt task to compile [CoffeeCup](https://github.com/gradus/coffeecup) into HTML.
 
