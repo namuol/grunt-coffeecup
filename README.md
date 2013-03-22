@@ -13,7 +13,7 @@ npm install grunt-coffeecup --save-dev
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of CoffeeScript:
 
-``` coffee-script
+```  coffeescript
 grunt.loadNpmTasks 'grunt-coffeecup'
 ```
 
@@ -28,7 +28,7 @@ Any items in the `options` object are passed to CoffeeCup's `render` function.
 
 ### Usage Example
 
-``` coffee-script
+``` coffeescript
 grunt.initConfig
   # ... other configurations ...
   coffeecup:
