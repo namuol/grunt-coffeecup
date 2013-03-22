@@ -1,7 +1,7 @@
 {
   "name": "grunt-coffeecup",
   "description": "Compile CoffeeCup into HTML.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/namuol/grunt-coffeecup",
   "author": {
     "name": "Louis Acresti",
