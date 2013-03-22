@@ -38,7 +38,10 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "coffeecup",
+    "coffeescript",
+    "coffee-script"
   ],
   "dependencies": {
     "coffeecup": "~0.3.19"
